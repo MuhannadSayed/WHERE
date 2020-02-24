@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		716B711E2403E42600FA7030 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B711D2403E42600FA7030 /* API.swift */; };
 		716B71202403E46800FA7030 /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B711F2403E46800FA7030 /* CityWeather.swift */; };
 		716B71222403E4FF00FA7030 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B71212403E4FF00FA7030 /* MyTableViewController.swift */; };
+		716B71252403FD5700FA7030 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 716B71242403FD5700FA7030 /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716B71252403FD5700FA7030 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +155,9 @@
 			dependencies = (
 			);
 			name = WHERE;
+			packageProductDependencies = (
+				716B71242403FD5700FA7030 /* Charts */,
+			);
 			productName = WHERE;
 			productReference = 716B70EA2403E34A00FA7030 /* WHERE.app */;
 			productType = "com.apple.product-type.application";
@@ -225,6 +230,9 @@
 				Base,
 			);
 			mainGroup = 716B70E12403E34A00FA7030;
+			packageReferences = (
+				716B71232403FD5700FA7030 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 716B70EB2403E34A00FA7030 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +610,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		716B71232403FD5700FA7030 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		716B71242403FD5700FA7030 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 716B71232403FD5700FA7030 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 716B70E22403E34A00FA7030 /* Project object */;
 }

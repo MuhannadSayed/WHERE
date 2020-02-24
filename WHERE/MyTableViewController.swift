@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
@@ -16,10 +17,7 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     var searchController : UISearchController!
        var searchResult : [String] = []
        var selectedCities : [String] = []
-    
-       
-       
-       var data : [String] = ["Tirana" , "Andorra la Vella" , "Yerevan" , "Vienna" , "Baku" , "Minsk" , "Brussels" , "Sarajevo" , "Sofia" , "Zagreb" , "Nicosia" , "Prague" , "Copenhagen" , "Tallinn" , "Helsinki" , "Paris" , "Tbilisi" , "Berlin" , "Athens" , "Budapest" , "Reykjavik" , "Nur-Sultan" , "Pristina" , "Riga" , "Vaduz" , "Vilnius" , "Luxembourg" , "Valletta" , "Chisinau" , "Monaco" , "Podgorica" , "Amsterdam" , "Skopje" , "Oslo" , "Warsaw" , "Lisbon" , "Bucharest" , "Moscow" , "San Marino" , "Belgrade" , "Bratislava" , "Ljubljana" , "Madrid" , "Stockholm" , "Bern" , "Kiev" , "London" , "Vatican" , "Damascus" , "Istanbul" , "Cairo" , "Dubai" , "Hong Kong" , "Jeursalem" ]
+       var data : [String] = ["Tirana" , "Andorra la Vella" , "Yerevan" , "Vienna" , "Baku" , "Minsk" , "Brussels" , "Sarajevo" , "Sofia" , "Zagreb" , "Nicosia" , "Prague" , "Copenhagen" , "Tallinn" , "Helsinki" , "Paris" , "Tbilisi" , "Berlin" , "Athens" , "Budapest" , "Reykjavik" , "Nur-Sultan" , "Pristina" , "Riga" , "Vaduz" , "Vilnius" , "Luxembourg" , "Valletta" , "Chisinau" , "Monaco" , "Podgorica" , "Amsterdam" , "Skopje" , "Oslo" , "Warsaw" , "Lisbon" , "Bucharest" , "Moscow" , "San Marino" , "Belgrade" , "Bratislava" , "Ljubljana" , "Madrid" , "Stockholm" , "Bern" , "Kiev" , "London" , "Vatican" , "Damascus" , "Istanbul" , "Cairo" , "Dubai"  ]
       
        
        func updateSearchResults(for searchController: UISearchController) {
@@ -45,12 +43,12 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
        return searchController.isActive }
        
        func numberOfSections(in tableView: UITableView) -> Int {
-           // #warning Incomplete implementation, return the number of sections
+         
            return 1
        }
 
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           // #warning Incomplete implementation, return the number of rows
+       
            if shouldUseSearchResult {
                return searchResult.count
            }else {
@@ -69,9 +67,7 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
        }
        
        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           //let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-           
-          // testLabel.text = "is selected \(indexPath.row) then \(cell.textLabel?.text)"
+
                
            let cell = tableView.cellForRow(at: indexPath)!
            let labelContent = cell.textLabel?.text
@@ -114,8 +110,6 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
        
        override func viewDidLoad() {
            super.viewDidLoad()
-       // print(shouldUseSearchResult.hashValue)
-        //print(searchController.isActive)
            definesPresentationContext = true
            searchController = UISearchController(searchResultsController: nil)
            searchController.searchResultsUpdater = self
