@@ -12,6 +12,8 @@ import Charts
 class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
     
+    
+    @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var testLabel: UILabel!
     var searchController : UISearchController!
@@ -23,6 +25,7 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
        func updateSearchResults(for searchController: UISearchController) {
           
            if let text = searchController.searchBar.text?.lowercased() {
+            
                searchResult = data.filter { $0.lowercased().contains(text.lowercased()) }
                } else {
                searchResult = []
@@ -74,25 +77,6 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
            selectedCities.append(labelContent!)
            print(selectedCities)
            
-          
-           
-           
-           let weatherApi=API()
-           weatherApi.fetchWeather(cityName: labelContent!){
-                  (Result) in
-                  
-                  switch Result{
-                  case.success(let weather):
-                          DispatchQueue.main.async {
-                              let temp : Double = weather.main.temp
-                              //print(" temp now is : \(temp)")
-                              let desc : String = weather.weather[0].description
-                              //print("Sky description is : \(desc)")
-                           self.testLabel.text = " temp now is : \(temp)° and Sky description is : \(desc)"
-                              }
-                          case.failure(let error): print("Error \(error)")
-                          }
-                }
        }
     
      
@@ -106,8 +90,51 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
            print(selectedCities)
 
        }
+       @IBAction func compare(_ sender: Any) {
+          barChartUpdate()
+       }
        
-       
+    func barChartUpdate () {
+        //future home of bar chart code
+        var temp : Double = 0
+        var desc : String = ""
+        var dataSet = BarChartDataSet()
+        var justnow : Double = 0
+        for city in selectedCities{
+            //justnow ++
+            
+            let weatherApi=API()
+                weatherApi.fetchWeather(cityName: city){
+                    (Result) in
+                switch Result{
+                case.success(let weather):
+                       DispatchQueue.main.async {
+                            temp  = weather.main.temp
+                           print(" temp now is : \(temp)")
+                            desc = weather.weather[0].description
+                           print("Sky description is : \(desc)")
+                        self.testLabel.text = " temp now is : \(temp)° and Sky description is : \(desc)"
+                           }
+                       case.failure(let error): print("Error \(error)")
+                       }
+                    justnow+=1
+                    let entry = BarChartDataEntry(x: justnow , y: Double(temp) , data: (desc) )
+                    dataSet.append(entry)
+                    print(entry)
+             }
+            
+            //(entries : [entry1],label: (desc))
+                
+        
+            
+            
+
+        }
+       let data = BarChartData(dataSets: [dataSet])
+        barChartView.data = data
+        barChartView.chartDescription?.text = "Cities"
+        barChartView.notifyDataSetChanged()
+    }
        override func viewDidLoad() {
            super.viewDidLoad()
            definesPresentationContext = true
@@ -119,7 +146,7 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
            tableView.delegate = self
            tableView.dataSource = self
            
-           
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
