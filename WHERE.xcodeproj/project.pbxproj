@@ -19,6 +19,7 @@
 		716B71202403E46800FA7030 /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B711F2403E46800FA7030 /* CityWeather.swift */; };
 		716B71222403E4FF00FA7030 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B71212403E4FF00FA7030 /* MyTableViewController.swift */; };
 		716B71252403FD5700FA7030 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 716B71242403FD5700FA7030 /* Charts */; };
+		716B71272406717900FA7030 /* CityInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B71262406717900FA7030 /* CityInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		716B711D2403E42600FA7030 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		716B711F2403E46800FA7030 /* CityWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
 		716B71212403E4FF00FA7030 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		716B71262406717900FA7030 /* CityInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				716B70EF2403E34A00FA7030 /* SceneDelegate.swift */,
 				716B70F12403E34A00FA7030 /* ViewController.swift */,
 				716B70F32403E34A00FA7030 /* Main.storyboard */,
+				716B71262406717900FA7030 /* CityInformation.swift */,
 				716B711D2403E42600FA7030 /* API.swift */,
 				716B71212403E4FF00FA7030 /* MyTableViewController.swift */,
 				716B711F2403E46800FA7030 /* CityWeather.swift */,
@@ -278,6 +281,7 @@
 			files = (
 				716B70F22403E34A00FA7030 /* ViewController.swift in Sources */,
 				716B71222403E4FF00FA7030 /* MyTableViewController.swift in Sources */,
+				716B71272406717900FA7030 /* CityInformation.swift in Sources */,
 				716B70EE2403E34A00FA7030 /* AppDelegate.swift in Sources */,
 				716B711E2403E42600FA7030 /* API.swift in Sources */,
 				716B70F02403E34A00FA7030 /* SceneDelegate.swift in Sources */,

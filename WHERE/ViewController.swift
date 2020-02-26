@@ -34,6 +34,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
                        DispatchQueue.main.async {
                         self.temp = weather.main.temp
                         print(" temp now is : \(self.temp)")
+                        print(weather.id)
                         self.desc = weather.weather[0].description
                         print("Sky description is : \(self.desc)")
                         self.clothes(status: (self.desc), grades: (self.temp))

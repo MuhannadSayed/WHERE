@@ -19,9 +19,12 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     var searchController : UISearchController!
        var searchResult : [String] = []
        var selectedCities : [String] = []
+       //let defaults = UserDefaults.standard
        var data : [String] = ["Tirana" , "Andorra la Vella" , "Yerevan" , "Vienna" , "Baku" , "Minsk" , "Brussels" , "Sarajevo" , "Sofia" , "Zagreb" , "Nicosia" , "Prague" , "Copenhagen" , "Tallinn" , "Helsinki" , "Paris" , "Tbilisi" , "Berlin" , "Athens" , "Budapest" , "Reykjavik" , "Nur-Sultan" , "Pristina" , "Riga" , "Vaduz" , "Vilnius" , "Luxembourg" , "Valletta" , "Chisinau" , "Monaco" , "Podgorica" , "Amsterdam" , "Skopje" , "Oslo" , "Warsaw" , "Lisbon" , "Bucharest" , "Moscow" , "San Marino" , "Belgrade" , "Bratislava" , "Ljubljana" , "Madrid" , "Stockholm" , "Bern" , "Kiev" , "London" , "Vatican" , "Damascus" , "Istanbul" , "Cairo" , "Dubai"  ]
       
-       
+    
+    
+    
        func updateSearchResults(for searchController: UISearchController) {
           
            if let text = searchController.searchBar.text?.lowercased() {
@@ -76,6 +79,7 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
            let labelContent = cell.textLabel?.text
            selectedCities.append(labelContent!)
            print(selectedCities)
+        //defaults.set(self.selectedCities, forKey: "citiesToCompare")
            
        }
     
@@ -88,9 +92,11 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
                selectedCities.remove(at: unWanted)
            }
            print(selectedCities)
+        //defaults.set(self.selectedCities, forKey: "citiesToCompare")
 
        }
        @IBAction func compare(_ sender: Any) {
+        
           barChartUpdate()
        }
        
@@ -99,7 +105,8 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         var temp : Double = 0
         var desc : String = ""
         var dataSet = BarChartDataSet()
-        var justnow : Double = 0
+        var entryCount : Double = 0
+        
         for city in selectedCities{
             //justnow ++
             
@@ -117,8 +124,8 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
                            }
                        case.failure(let error): print("Error \(error)")
                        }
-                    justnow+=1
-                    let entry = BarChartDataEntry(x: justnow , y: Double(temp) , data: (desc) )
+                    entryCount+=1
+                    let entry = BarChartDataEntry(x: entryCount , y: Double(temp) , data: (desc) )
                     dataSet.append(entry)
                     print(entry)
              }
@@ -135,8 +142,23 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
         barChartView.chartDescription?.text = "Cities"
         barChartView.notifyDataSetChanged()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = tableView.indexPathForSelectedRow
+        _ = indexPath?.row
+        let cell = tableView.cellForRow(at: indexPath!)
+        let nameOfCity : String = (cell?.textLabel!.text)!
+        let info = segue.destination as! CityInformation
+        info.Outside = nameOfCity
+        
+        
+    }
+ 
        override func viewDidLoad() {
            super.viewDidLoad()
+        //if let selected = defaults.array(forKey: "citiesToCompare") as? [String]{
+            //selectedCities = selected
+        //}
            definesPresentationContext = true
            searchController = UISearchController(searchResultsController: nil)
            searchController.searchResultsUpdater = self
