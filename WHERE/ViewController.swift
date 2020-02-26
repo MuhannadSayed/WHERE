@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController , UITextFieldDelegate {
 
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var clothesLabel: UILabel!
     @IBOutlet weak var search: UITextField!
     @IBOutlet weak var userEntry: UITextField!
+    var temp : Double = 0
+    var desc : String = ""
+    
     @IBAction func checkWeather(_ sender: Any) {
-        //user()
-        print(user())
+       
         search.endEditing(true)
 
         
@@ -28,28 +32,38 @@ class ViewController: UIViewController , UITextFieldDelegate {
                switch Result{
                case.success(let weather):
                        DispatchQueue.main.async {
-                           let temp : Double = weather.main.temp
-                           print(" temp now is : \(temp)")
-                           let desc : String = weather.weather[0].description
-                           print("Sky description is : \(desc)")
-                           // uppdatera UI
+                        self.temp = weather.main.temp
+                        print(" temp now is : \(self.temp)")
+                        self.desc = weather.weather[0].description
+                        print("Sky description is : \(self.desc)")
+                        self.clothes(status: (self.desc), grades: (self.temp))
                            }
                        case.failure(let error): print("Error \(error)")
                        }
         
                        
                }
+        
            }
     
-    func user() -> String {
-        print(userEntry.text)
-        let u : String = ""
-        if  userEntry.text! != "" {
-            print(u)
-        }else{
-            print("nothing to eat")
+ 
+    
+    func clothes(status : String , grades : Double )  {
+        //print(desc)
+        print(status)
+        if status.contains("rain"){
+            clothesLabel.text = "temprature is : \(grades) ° and it's raining justnow , take some rainclothes "
+            weatherImage.image = UIImage (systemName: "cloud.rain")
+        }else if status.contains("snow"){
+            clothesLabel.text = "temprature is : \(grades) ° and it's snowing justnow , take some snowclothes "
+            weatherImage.image = UIImage (systemName: "cloud.snow")
+        }else if status.contains("wind"){
+            clothesLabel.text = "temprature is : \(grades) ° and it's windy justnow , take some windclothes "
+            weatherImage.image = UIImage (systemName: "wind")
+        }else {
+        clothesLabel.text = "temprature is : \(grades) ° and nothing special with weather take clothes which suitable to temprature "
+            weatherImage.image = UIImage (systemName: "cloud")
         }
-        return u
     }
     
     
@@ -64,6 +78,8 @@ class ViewController: UIViewController , UITextFieldDelegate {
         print(search.text)
         return true
     }
+    
+    
 
 
 }
