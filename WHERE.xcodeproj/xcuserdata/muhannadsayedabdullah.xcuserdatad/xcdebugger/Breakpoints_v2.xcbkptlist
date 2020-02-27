@@ -78,8 +78,8 @@
             filePath = "WHERE/CityInformation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "CityInformation"
             landmarkType = "3">
          </BreakpointContent>

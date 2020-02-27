@@ -4,10 +4,8 @@
 <dict>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>icon.jpg</string>
+		<string>myIcon.jpg</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

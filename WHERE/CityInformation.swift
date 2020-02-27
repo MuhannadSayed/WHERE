@@ -17,6 +17,11 @@ class CityInformation: UIViewController {
     var temp : Double = 0
     var desc : String = ""
     var speed : Double = 0
+    var squareView: UIView!
+    
+    var gravity: UIGravityBehavior!
+    var animator: UIDynamicAnimator!
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +74,15 @@ class CityInformation: UIViewController {
     */
 
 }
+        
+        // här
+        
+        squareView = UIView(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
+        squareView.backgroundColor = UIColor.blue
+        view.addSubview(squareView)
+        animator = UIDynamicAnimator(referenceView: view)
+        gravity = UIGravityBehavior(items: [squareView])
+        animator.addBehavior(gravity)
     }
     
     func clothes()  {

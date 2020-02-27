@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7159936B24081CD40095C761 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7159936A24081CD40095C761 /* icon.jpg */; };
+		7159936B24081CD40095C761 /* myIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7159936A24081CD40095C761 /* myIcon.jpg */; };
 		716B70EE2403E34A00FA7030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B70ED2403E34A00FA7030 /* AppDelegate.swift */; };
 		716B70F02403E34A00FA7030 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B70EF2403E34A00FA7030 /* SceneDelegate.swift */; };
 		716B70F22403E34A00FA7030 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B70F12403E34A00FA7030 /* ViewController.swift */; };
@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7159936A24081CD40095C761 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = ../../../../Downloads/icon.jpg; sourceTree = "<group>"; };
+		7159936A24081CD40095C761 /* myIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = myIcon.jpg; path = ../../../../Downloads/myIcon.jpg; sourceTree = "<group>"; };
 		7159936C24081CDA0095C761 /* myBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = myBackground.jpg; sourceTree = "<group>"; };
 		716B70EA2403E34A00FA7030 /* WHERE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHERE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716B70ED2403E34A00FA7030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 			children = (
 				716B71042403E34D00FA7030 /* WHERETests.swift */,
 				716B71062403E34E00FA7030 /* Info.plist */,
-				7159936A24081CD40095C761 /* icon.jpg */,
+				7159936A24081CD40095C761 /* myIcon.jpg */,
 				7159936C24081CDA0095C761 /* myBackground.jpg */,
 			);
 			path = WHERETests;
@@ -271,7 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7159936B24081CD40095C761 /* icon.jpg in Resources */,
+				7159936B24081CD40095C761 /* myIcon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
