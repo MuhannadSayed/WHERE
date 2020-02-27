@@ -33,11 +33,7 @@ class CityInformation: UIViewController {
             self.cityName.alpha = 1
             
         }, completion: nil)
-        /*
-        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector(("animate")), userInfo: nil, repeats: true)
-        timer.fire()
-        
-        */
+      
         
         
          clothes()
@@ -58,24 +54,10 @@ class CityInformation: UIViewController {
                case.failure(let error): print("Error \(error)")
            
             
-    }
-            
+                }
 
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-        
-        // här
+            }
         
         squareView = UIView(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
         squareView.backgroundColor = UIColor.blue
@@ -86,7 +68,7 @@ class CityInformation: UIViewController {
     }
     
     func clothes()  {
-        //print(desc)
+       
         
         if self.desc.contains("rain"){
            
@@ -107,28 +89,5 @@ class CityInformation: UIViewController {
         weatherImage.center.y -= view.bounds.width
     }
     
-    /*
-    func animate() {
-        
-        let option1: UIView.AnimationOptions = .curveEaseIn
-        let option2: UIView.AnimationOptions = .repeat
-        
-        UIView.transition(with: cityName,
-                              duration: 1.0,
-                              options:[option1, option2] ,
-                              animations: { () -> Void in
-                                
-                                self.cityName.text = "\(self.Outside)"
-        }, completion: nil)
-
-    }
-    /*
-    func UIView.transition(with: cityName,
-         duration: 0.25,
-          options: .transitionCrossDissolve,
-       animations: { [weak self] in
-           self?.cityName.text = (arc4random()() % 2 == 0) ? "One" : "Two"
-    }, completion: nil)
- */
-  */
+    
 }
