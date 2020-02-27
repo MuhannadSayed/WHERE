@@ -67,8 +67,11 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNM-6G-OZ9">
                                                 <rect key="frame" x="164" y="184" width="92" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Cities list "/>
+                                                <state key="normal" title="Cities list ">
+                                                    <color key="titleColor" red="0.86855567889999996" green="0.083889416130000005" blue="0.13688340660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="uRa-Os-v8i" kind="show" id="ovd-Ys-GCE"/>
                                                 </connections>
