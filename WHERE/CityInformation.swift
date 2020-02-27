@@ -73,4 +73,13 @@ class CityInformation: UIViewController {
             self.weatherImage.image = UIImage (systemName: "cloud")
         }
     }
+    /*
+    func UIView.transition(with: cityName,
+         duration: 0.25,
+          options: .transitionCrossDissolve,
+       animations: { [weak self] in
+           self?.cityName.text = (arc4random()() % 2 == 0) ? "One" : "Two"
+    }, completion: nil)
+ */
+    
 }
