@@ -15,7 +15,7 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var testLabel: UILabel!
+   
     var searchController : UISearchController!
        var searchResult : [String] = []
        var selectedCities : [String] = []
@@ -120,7 +120,7 @@ class MyTableViewController: UIViewController, UITableViewDelegate, UITableViewD
                            print(" temp now is : \(temp)")
                             desc = weather.weather[0].description
                            print("Sky description is : \(desc)")
-                        self.testLabel.text = " temp now is : \(temp)° and Sky description is : \(desc)"
+                        
                            }
                        case.failure(let error): print("Error \(error)")
                        }

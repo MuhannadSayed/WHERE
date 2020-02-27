@@ -17,9 +17,24 @@ class CityInformation: UIViewController {
     var temp : Double = 0
     var desc : String = ""
     var speed : Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cityName.text = Outside
+        
+        
+        UIView.animate(withDuration: 5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: [], animations: {
+            self.weatherImage.center.y += self.view.bounds.width
+            self.cityName.alpha = 1
+            
+        }, completion: nil)
+        /*
+        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector(("animate")), userInfo: nil, repeats: true)
+        timer.fire()
+        
+        */
+        
+        
          clothes()
         let weatherApi=API()
         weatherApi.fetchWeather(cityName: Outside){
@@ -73,6 +88,26 @@ class CityInformation: UIViewController {
             self.weatherImage.image = UIImage (systemName: "cloud")
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        weatherImage.center.y -= view.bounds.width
+    }
+    
+    /*
+    func animate() {
+        
+        let option1: UIView.AnimationOptions = .curveEaseIn
+        let option2: UIView.AnimationOptions = .repeat
+        
+        UIView.transition(with: cityName,
+                              duration: 1.0,
+                              options:[option1, option2] ,
+                              animations: { () -> Void in
+                                
+                                self.cityName.text = "\(self.Outside)"
+        }, completion: nil)
+
+    }
     /*
     func UIView.transition(with: cityName,
          duration: 0.25,
@@ -81,5 +116,5 @@ class CityInformation: UIViewController {
            self?.cityName.text = (arc4random()() % 2 == 0) ? "One" : "Two"
     }, completion: nil)
  */
-    
+  */
 }
