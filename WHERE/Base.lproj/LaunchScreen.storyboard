@@ -27,20 +27,13 @@
                                 <color key="textColor" red="0.86855567889999996" green="0.083889416130000005" blue="0.13688340660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="x6I-tH-YmY">
-                                <rect key="frame" x="0.0" y="20" width="414" height="876"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="O1a-n2-Ywv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2FF-x9-pvX"/>
-                            <constraint firstItem="x6I-tH-YmY" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8Fw-aX-1sJ"/>
-                            <constraint firstAttribute="bottom" secondItem="x6I-tH-YmY" secondAttribute="bottom" id="8N3-dA-ZRw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O1a-n2-Ywv" secondAttribute="bottom" constant="162" id="Kgx-jo-agl"/>
                             <constraint firstItem="O1a-n2-Ywv" firstAttribute="top" secondItem="3BV-uG-6vG" secondAttribute="bottom" constant="24" id="LvG-dM-p6y"/>
-                            <constraint firstItem="x6I-tH-YmY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rgm-9i-lk8"/>
                             <constraint firstItem="3BV-uG-6vG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kHY-UL-Hx8"/>
-                            <constraint firstItem="x6I-tH-YmY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" symbolic="YES" id="oKh-sW-UCB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -50,7 +43,4 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="myBackground.jpg" width="640" height="960"/>
-    </resources>
 </document>
