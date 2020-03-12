@@ -21,7 +21,6 @@
 		716B71222403E4FF00FA7030 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B71212403E4FF00FA7030 /* MyTableViewController.swift */; };
 		716B71252403FD5700FA7030 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 716B71242403FD5700FA7030 /* Charts */; };
 		716B71272406717900FA7030 /* CityInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B71262406717900FA7030 /* CityInformation.swift */; };
-		716B71292407D17900FA7030 /* myBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 716B71282407D17900FA7030 /* myBackground.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		716B711F2403E46800FA7030 /* CityWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
 		716B71212403E4FF00FA7030 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		716B71262406717900FA7030 /* CityInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInformation.swift; sourceTree = "<group>"; };
-		716B71282407D17900FA7030 /* myBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = myBackground.jpg; path = ../../../../Downloads/myBackground.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +122,6 @@
 				716B711F2403E46800FA7030 /* CityWeather.swift */,
 				716B70F62403E34D00FA7030 /* Assets.xcassets */,
 				716B70F82403E34D00FA7030 /* LaunchScreen.storyboard */,
-				716B71282407D17900FA7030 /* myBackground.jpg */,
 				716B70FB2403E34D00FA7030 /* Info.plist */,
 			);
 			path = WHERE;
@@ -260,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				716B71292407D17900FA7030 /* myBackground.jpg in Resources */,
 				716B70FA2403E34D00FA7030 /* LaunchScreen.storyboard in Resources */,
 				716B70F72403E34D00FA7030 /* Assets.xcassets in Resources */,
 				716B70F52403E34A00FA7030 /* Main.storyboard in Resources */,
